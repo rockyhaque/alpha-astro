@@ -56,6 +56,7 @@
 
           <!-- keyboard -->
           <div>
+            <div><h1 class="text-xl mb-12 text-white text-center">Press <span class="text-red-500 font-bold">'Esc'</span> to end the game!</h1></div>
             <div class="flex justify-center gap-1 my-1 w-full">
               <kbd id="q" class="kbd">q</kbd>
               <kbd id="w" class="kbd">w</kbd>
@@ -95,14 +96,14 @@
           <div class="flex justify-evenly w-3/4">
             <div>
               <button class="btn bg-[#894189] text-white border-0 rounded-full">
-                Button
+                Life
                 <img src="./images/love.svg" alt="" />
                 <span class="font-bold text-xl" id="current-life">5</span>
               </button>
             </div>
             <div>
               <button class="btn bg-[#360490] text-white border-0 rounded-full">
-                Button
+                Score
                 <img src="./images/dollar.svg" alt="" />
                 <span class="font-bold text-xl" id="current-score">0</span>
               </button>
@@ -112,18 +113,18 @@
       </section>
 
       <!-- Scoring -->
-      <section
-        id="scoring"
-        class="flex justify-center items-center min-h-screen hidden"
-      >
+      <section id="final-score" class="flex flex-col justify-center items-center min-h-screen gap-12 hidden">
+        <div class="text-center">
+          <h1 class="text-8xl font-extrabold text-transparent bg-clip-text bg-gradient-to-r from-slate-100 via-pink-100 to-purple-300">Game Over</h1>
+        </div>
         <div
           class="text-white bg-[#FFFFFF33] bg-[url(./images/shape.svg)] bg-no-repeat text-center space-y-5 border border-zinc-500 p-14 rounded-2xl"
         >
           <h1 class="text-6xl">
             <span class="font-extrabold">Score:</span>
-            <span>1</span>
+            <span id="game-over-scoring">10</span>
           </h1>
-          <button class="btn font-bold">Play Again</button>
+          <button onclick="play()" class="btn font-bold">Play Again</button>
           <p>Practice will make you pro ⏩</p>
         </div>
       </section>
